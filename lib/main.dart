@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Text("Hello Flutter" textDirection: TextDecoration()));
+  runApp(const MaterialApp(
+    home: Center(
+      child: Text("Hello Twitter"),
+    ),
+  ));
 }
-
