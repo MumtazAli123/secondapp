@@ -23,16 +23,24 @@ class FadeAppTest extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Container(
-            width: 200,
-            height: 100,
-            color: Colors.red[600],
-            child: const Center(
-              child: Text(
-                "Hello Dart ",
-                style: TextStyle(
-                  fontSize: 35,
-                  color: Colors.white,
+          child: InkWell(
+            onTap: () {
+              print("Ali");
+            },
+            onDoubleTap: () {
+              print('Dubai');
+            },
+            child: Container(
+              width: 200,
+              height: 100,
+              color: Colors.red[600],
+              child: const Center(
+                child: Text(
+                  "Hello Dart ",
+                  style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
