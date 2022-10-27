@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mysecondapp/sidebar.dart';
 
 void main() {
   runApp(const FadeAppTest());
@@ -16,34 +17,65 @@ class FadeAppTest extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
+        drawer: Sidebar(),
         appBar: AppBar(
           title: const Text(
             "My App",
             style: TextStyle(color: Colors.red, fontSize: 30),
           ),
         ),
-        body: Center(
-          child: InkWell(
-            onTap: () {
-              print("Ali");
-            },
-            onDoubleTap: () {
-              print('Dubai');
-            },
-            child: Container(
-              width: 200,
-              height: 100,
-              color: Colors.red[600],
-              child: const Center(
-                child: Text(
-                  "Hello Dart ",
-                  style: TextStyle(
-                    fontSize: 35,
-                    color: Colors.white,
-                  ),
-                ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GridView.count(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 11,
+            children: [
+              Container(
+                  color: Colors.red,
+                  child: Image.asset(
+                    'assets/images/download.jpeg',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  )),
+              Container(
+                  color: Colors.yellow,
+                  child: Image.asset(
+                    'assets/images/dart3.jpeg',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  )),
+              Container(
+                  color: Colors.green,
+                  child: Image.asset('assets/images/dart2.png')),
+              Image.asset('assets/images/download.jpeg'),
+              Container(
+                  color: Colors.blue,
+                  child: Image.asset(
+                    'assets/images/dart.webp',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  )),
+              Container(
+                  color: Colors.redAccent,
+                  child: Image.asset(
+                    'assets/images/dart1.webp',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  )),
+              Image.asset(
+                'assets/images/download.jpeg',
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
               ),
-            ),
+              Image.asset('assets/images/download.jpeg'),
+              Image.asset('assets/images/dart3.jpeg'),
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
