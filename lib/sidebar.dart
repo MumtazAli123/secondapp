@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Sidebar extends StatelessWidget {
+  const Sidebar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -12,13 +14,13 @@ class Sidebar extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             accountEmail: const Text(
-              'ali@gmail.com',
+              'shah@gmail.com',
               style: TextStyle(color: Colors.white),
             ),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
-                child: Image.network(
-                  'https://i.pinimg.com/280x280_RS/16/cd/f9/16cdf9de1f3a3739e1a2256e7e20051e.jpg',
+                child: Image.asset(
+                  './assets/images/Sir.jpeg',
                   width: 100,
                   height: 100,
                   fit: BoxFit.cover,
@@ -28,9 +30,8 @@ class Sidebar extends StatelessWidget {
             decoration: const BoxDecoration(
                 image: DecorationImage(
               image: NetworkImage(
-                "https://image.shutterstock.com/image-vector/abstract-background-modern-hipster-futuristic-260nw-1441782806.jpg",
+                'https://minutemirror.com.pk//wp-content/uploads/2022/08/imran-khan-7.jpg',
               ),
-              fit: BoxFit.cover,
             )),
           ),
           const ListTile(
@@ -39,9 +40,20 @@ class Sidebar extends StatelessWidget {
             ),
             title: Text('Home'),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.favorite),
             title: Text("Contact"),
+          ),
+          const ListTile(
+            leading: Icon(Icons.email),
+            title: Text("Email"),
+          ),
+          ListTile(
+            leading: Icon(Icons.phone),
+            onTap: () {
+              print('Karachi');
+            },
+            title: Text("Phone"),
           )
         ],
       ),
