@@ -17,7 +17,7 @@ class FadeAppTest extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
-        drawer: Sidebar(),
+        drawer: const Sidebar(),
         appBar: AppBar(
           title: const Text(
             "My App",

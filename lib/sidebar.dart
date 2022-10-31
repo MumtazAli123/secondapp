@@ -28,11 +28,12 @@ class Sidebar extends StatelessWidget {
               ),
             ),
             decoration: const BoxDecoration(
-                image: DecorationImage(
-              image: NetworkImage(
-                'https://minutemirror.com.pk//wp-content/uploads/2022/08/imran-khan-7.jpg',
+              image: DecorationImage(
+                image: NetworkImage(
+                  'https://minutemirror.com.pk//wp-content/uploads/2022/08/imran-khan-7.jpg',
+                ),
               ),
-            )),
+            ),
           ),
           const ListTile(
             leading: Icon(
